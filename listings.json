@@ -1,0 +1,20 @@
+[
+  {
+    "listing": "/gl/blog/index.html",
+    "items": [
+      "/gl/blog/posts/cp1-intro.html"
+    ]
+  },
+  {
+    "listing": "/es/blog/index.html",
+    "items": [
+      "/es/blog/posts/cp1-intro.html"
+    ]
+  },
+  {
+    "listing": "/en/blog/index.html",
+    "items": [
+      "/en/blog/posts/cp1-intro.html"
+    ]
+  }
+]

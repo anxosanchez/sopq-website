@@ -1,0 +1,434 @@
+/* Custom Premium Styling for SOPQ Academic Website */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+  --sopq-primary: #0A5C36;
+  --sopq-primary-hover: #084c2d;
+  --sopq-secondary: #2D3748;
+  --sopq-accent: #319795; /* Teal accent */
+  --sopq-accent-light: #EBF8FF;
+  --sopq-bg-light: #FAFAFA;
+  --sopq-card-bg: #FFFFFF;
+  --sopq-border-color: #E2E8F0;
+  --sopq-text-dark: #1A202C;
+  --sopq-text-light: #718096;
+  
+  /* Custom badge colors */
+  --badge-theory-bg: #E6FFFA;
+  --badge-theory-text: #234E52;
+  --badge-lab-bg: #EDF2F7;
+  --badge-lab-text: #2B6CB0;
+  --badge-project-bg: #FEFCBF;
+  --badge-project-text: #744210;
+  --badge-due-bg: #FED7D7;
+  --badge-due-text: #9B2C2C;
+  
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Roboto Mono', monospace;
+}
+
+/* Dark Mode Theme Variables */
+html.dark-mode, [data-bs-theme="dark"] {
+  --sopq-bg-light: #1A202C;
+  --sopq-card-bg: #2D3748;
+  --sopq-border-color: #4A5568;
+  --sopq-text-dark: #EDF2F7;
+  --sopq-text-light: #A0AEC0;
+  
+  --badge-theory-bg: #1A365D;
+  --badge-theory-text: #90CDF4;
+  --badge-lab-bg: #22543D;
+  --badge-lab-text: #9AE6B4;
+  --badge-project-bg: #744210;
+  --badge-project-text: #FEFCBF;
+  --badge-due-bg: #742A2A;
+  --badge-due-text: #FEB2B2;
+}
+
+/* Global Reset & Typography */
+body {
+  font-family: var(--font-sans);
+  background-color: var(--sopq-bg-light);
+  color: var(--sopq-text-dark);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Glassmorphism Navigation Bar */
+.navbar {
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  background-color: rgba(10, 92, 54, 0.88) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.navbar .navbar-brand {
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  font-family: var(--font-sans);
+  color: #FFFFFF !important;
+}
+
+.navbar .nav-link {
+  color: rgba(255, 255, 255, 0.8) !important;
+  padding: 0.5rem 1rem !important;
+  margin: 0 0.1rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.navbar .nav-link:hover, .navbar .nav-link.active {
+  color: #FFFFFF !important;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Dynamic Language Switcher Hide/Show CSS rules */
+/* Default: Hide all page navigation links. Show only active language and selector buttons */
+.navbar-nav .nav-link {
+  display: none;
+}
+
+/* Always show the language toggle button on the right */
+.navbar-nav .nav-link[href$="index.qmd"],
+.navbar-nav .nav-link[href$="index.html"] {
+  display: block; /* Fallback for toggle buttons */
+}
+
+/* Specifically show only current language nav links based on html class */
+
+/* 1. Galician */
+html.lang-gl .navbar-nav .nav-link[href*="/gl/"],
+html.lang-gl .navbar-nav .nav-link[href="index.qmd"],
+html.lang-gl .navbar-nav .nav-link[href="index.html"] {
+  display: block !important;
+}
+html.lang-gl .navbar-nav .nav-link[href*="/es/"],
+html.lang-gl .navbar-nav .nav-link[href*="/en/"] {
+  display: none !important;
+}
+/* Highlight active language in Galician view */
+html.lang-gl .navbar-nav .nav-link[href="index.html"],
+html.lang-gl .navbar-nav .nav-link[href="index.qmd"] {
+  font-weight: 700;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* 2. Spanish */
+html.lang-es .navbar-nav .nav-link[href*="/es/"] {
+  display: block !important;
+}
+html.lang-es .navbar-nav .nav-link[href*="/gl/"],
+html.lang-es .navbar-nav .nav-link[href*="/en/"],
+html.lang-es .navbar-nav .nav-link[href="index.qmd"],
+html.lang-es .navbar-nav .nav-link[href="index.html"] {
+  display: none !important;
+}
+/* Allow language selector on the right to remain visible, but resolve correctly */
+html.lang-es .navbar-nav .nav-link[href*="es/index.qmd"],
+html.lang-es .navbar-nav .nav-link[href*="es/index.html"] {
+  display: block !important;
+  font-weight: 700;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+/* Also show other language buttons in right container so user can toggle back! */
+.navbar-nav {
+  display: flex;
+}
+
+/* Ensure language toggle links on the right are always visible */
+.navbar-nav:last-child .nav-link {
+  display: block !important;
+}
+
+/* Schedule Layout & Timeline Component */
+.schedule-container {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Filters and Controls */
+.schedule-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.filter-btn-group {
+  display: flex;
+  gap: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.03);
+  padding: 0.3rem;
+  border-radius: 8px;
+  border: 1px solid var(--sopq-border-color);
+}
+
+.filter-btn {
+  background: none;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 6px;
+  color: var(--sopq-text-light);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+  color: var(--sopq-text-dark);
+}
+
+.filter-btn.active {
+  background-color: var(--sopq-primary);
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(10, 92, 54, 0.2);
+}
+
+/* Timeline Cards */
+.timeline-week-card {
+  background-color: var(--sopq-card-bg);
+  border: 1px solid var(--sopq-border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 1.5rem;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+
+.timeline-week-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+  border-color: var(--sopq-primary);
+}
+
+/* Highlight Current Week */
+.timeline-week-card.current-week {
+  border: 2px solid var(--sopq-primary);
+  box-shadow: 0 8px 30px rgba(10, 92, 54, 0.08);
+  position: relative;
+  background: linear-gradient(to right, rgba(10, 92, 54, 0.01), var(--sopq-card-bg) 150px);
+}
+
+.timeline-week-card.current-week::after {
+  content: "ACTUAL / CURRENT";
+  position: absolute;
+  top: -12px;
+  left: 20px;
+  background-color: var(--sopq-primary);
+  color: #FFFFFF;
+  font-size: 0.75rem;
+  font-weight: 800;
+  font-family: var(--font-sans);
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+}
+
+/* Week Info Block (Grid Left Column) */
+.week-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid var(--sopq-border-color);
+  padding-right: 1.5rem;
+}
+
+.week-number {
+  font-family: var(--font-mono);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--sopq-primary);
+  line-height: 1;
+}
+
+.week-dates {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--sopq-text-light);
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+/* Details Block (Grid Right Column) */
+.week-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* Session Row */
+.session-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.session-badge {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+  width: 90px;
+  text-align: center;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.session-badge.theory {
+  background-color: var(--badge-theory-bg);
+  color: var(--badge-theory-text);
+}
+
+.session-badge.lab {
+  background-color: var(--badge-lab-bg);
+  color: var(--badge-lab-text);
+}
+
+.session-badge.project {
+  background-color: var(--badge-project-bg);
+  color: var(--badge-project-text);
+}
+
+.session-content {
+  flex: 1;
+}
+
+.session-title {
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-bottom: 0.25rem;
+  color: var(--sopq-text-dark);
+}
+
+.session-desc {
+  font-size: 0.9rem;
+  color: var(--sopq-text-light);
+  margin-bottom: 0.4rem;
+}
+
+.session-links {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.session-link {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--sopq-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: color 0.2s ease;
+}
+
+.session-link:hover {
+  color: var(--sopq-primary-hover);
+  text-decoration: underline;
+}
+
+/* Deliverables Section */
+.week-deliverables {
+  background-color: rgba(0, 0, 0, 0.015);
+  border-radius: 8px;
+  padding: 0.8rem 1.2rem;
+  border-left: 4px solid #E53E3E;
+  margin-top: 0.3rem;
+}
+
+html.dark-mode .week-deliverables, [data-bs-theme="dark"] .week-deliverables {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.deliverable-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.deliverable-title {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #C53030;
+}
+
+html.dark-mode .deliverable-title, [data-bs-theme="dark"] .deliverable-title {
+  color: #FEB2B2;
+}
+
+.deliverable-due {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  background-color: var(--badge-due-bg);
+  color: var(--badge-due-text);
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+}
+
+/* Callout Styling Callout Override */
+.callout {
+  border-radius: 8px;
+  border-left-width: 5px;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+/* Typography Scales */
+h1, h2, h3, h4 {
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: var(--sopq-primary);
+}
+
+.lead {
+  font-weight: 400;
+  color: var(--sopq-text-light);
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .timeline-week-card {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .week-info {
+    border-right: none;
+    border-bottom: 1px solid var(--sopq-border-color);
+    padding-right: 0;
+    padding-bottom: 1rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .week-dates {
+    margin-top: 0;
+  }
+  
+  .session-row {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  
+  .session-badge {
+    width: auto;
+    align-self: flex-start;
+  }
+}
