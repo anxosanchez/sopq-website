@@ -1,0 +1,12 @@
+# Quarto outputs
+/.quarto/
+/_site/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+out.txt
+err.txt

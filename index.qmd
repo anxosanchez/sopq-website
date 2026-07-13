@@ -1,0 +1,29 @@
+---
+title: "Simulación e Optimización de Procesos Químicos"
+subtitle: "Grao en Enxeñaría Química | Curso 2026-2027"
+description: "Deseño asistido por ordenador, modelado termodinámico, integración enerxética e optimización económica de procesos químicos."
+---
+
+::: {.column-page}
+
+# Benvido a SOPQ (2026-2027)
+
+Este é o portal web oficial para a materia **Simulación e Optimización de Procesos Químicos (SOPQ)** do primeiro cuadrimestre do curso académico 2026-2027. Aquí atoparás todo o material necesario para as clases teóricas, as guías dos casos prácticos de laboratorio e o seguimento do Proxecto Integrador de Grupo (PGI).
+
+---
+
+## Axenda e Calendario do Curso
+
+Utiliza a seguinte liña de tempo interactiva para consultar o contido de cada semana, acceder ás presentacións de teoría, descargar os guías de prácticas (CP) e ver os prazos de entrega.
+
+<div id="schedule-timeline"></div>
+
+---
+
+## Canles de Comunicación e Ferramentas
+
+*   **Plataforma de Simulación**: Empregaremos **DWSIM** (código aberto) e **Aspen Plus v14** nas sesións de laboratorio informático.
+*   **Canle de Dúbidas**: Podes formular preguntas sobre os casos prácticos no foro de Moodle ou a través do correo institucional.
+*   **Entrega de Traballos**: Todas as entregas dos casos (CP1 a CP12) e os fitos do proxecto (M1 a M3) realizaranse na aula virtual.
+
+:::

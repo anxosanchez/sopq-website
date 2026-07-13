@@ -1,0 +1,17 @@
+---
+title: "Lab Journal & Course Materials (SOPQ)"
+subtitle: "Supporting resources, installation guides, and simulation troubleshooting"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+  fields: [date, title, reading-time, description, categories, author]
+page-layout: full
+title-block-banner: true
+lang: en
+---
+
+Welcome to our digital course journal. Here we will publish course updates, process design guidelines, tips for process simulators, and specific walk-throughs for each computer laboratory case (CP).

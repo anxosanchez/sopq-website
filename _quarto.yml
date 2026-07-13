@@ -1,0 +1,71 @@
+project:
+  type: website
+  output-dir: _site
+  resources:
+    - schedule.js
+  render:
+    - index.qmd
+    - gl/index.qmd
+    - gl/guia-docente.qmd
+    - gl/blog/index.qmd
+    - gl/blog/posts/cp1-intro.qmd
+    - es/index.qmd
+    - es/guia-docente.qmd
+    - es/blog/index.qmd
+    - es/blog/posts/cp1-intro.qmd
+    - en/index.qmd
+    - en/guia-docente.qmd
+    - en/blog/index.qmd
+    - en/blog/posts/cp1-intro.qmd
+
+website:
+  title: "SOPQ"
+  navbar:
+    background: primary
+    search: true
+    left:
+      # Galego (Primary) Links
+      - text: "SOPQ"
+        href: index.qmd
+      - text: "Guía Docente"
+        href: gl/guia-docente.qmd
+      - text: "Blog"
+        href: gl/blog/index.qmd
+      
+      # Spanish Links
+      - text: "SOPQ"
+        href: es/index.qmd
+      - text: "Guía Docente"
+        href: es/guia-docente.qmd
+      - text: "Blog"
+        href: es/blog/index.qmd
+      
+      # English Links
+      - text: "SOPQ"
+        href: en/index.qmd
+      - text: "Syllabus"
+        href: en/guia-docente.qmd
+      - text: "Blog"
+        href: en/blog/index.qmd
+
+    right:
+      - text: "Galego"
+        href: index.qmd
+      - text: "Español"
+        href: es/index.qmd
+      - text: "English"
+        href: en/index.qmd
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: superhero
+    css: styles.css
+    include-in-header: header.html
+    include-after-body: footer.html
+
+execute:
+  freeze: auto
+
+editor: visual

@@ -1,0 +1,15 @@
+<script>
+  // Add custom active state classes to navbar links on load
+  document.addEventListener("DOMContentLoaded", function() {
+    var path = window.location.pathname;
+    var navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    navLinks.forEach(function(link) {
+      var href = link.getAttribute('href');
+      if (href) {
+        if (path.endsWith(href) || (href === 'index.html' && path.endsWith('/'))) {
+          link.classList.add('active');
+        }
+      }
+    });
+  });
+</script>

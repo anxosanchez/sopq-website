@@ -1,0 +1,30 @@
+---
+title: "Chemical Process Simulation and Optimization"
+subtitle: "Degree in Chemical Engineering | Academic Year 2026-2027"
+description: "Computer-aided process design, thermodynamic property modeling, pinch energy integration, and economic optimization of chemical plants."
+lang: en
+---
+
+::: {.column-page}
+
+# Welcome to SOPQ (2026-2027)
+
+This is the official course portal for **Chemical Process Simulation and Optimization (SOPQ)** corresponding to the first semester of the 2026-2027 academic year. Here you will find all the materials required for lectures, practical lab session guides (CP), and tracking for the Integrated Group Project (PGI).
+
+---
+
+## Course Timeline & Agenda
+
+Use the interactive timeline below to browse week-by-week topics, view lecture slide links, download lab case (CP) instructions, and track deliverable due dates.
+
+<div id="schedule-timeline"></div>
+
+---
+
+## Communication Channels & Tools
+
+*   **Simulation Software**: We will use **DWSIM** (open source) and **Aspen Plus v14** during our computer laboratory sessions.
+*   **Q&A Forum**: You can submit questions regarding the practical cases on the Moodle forum or via institutional email.
+*   **Assignments**: All lab case (CP1-CP12) submissions and group project milestones (M1-M3) are turned in through the Virtual Classroom.
+
+:::

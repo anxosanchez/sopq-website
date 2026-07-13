@@ -1,0 +1,17 @@
+---
+title: "Cuaderno de Prácticas y Materiales (SOPQ)"
+subtitle: "Recursos de apoyo, guías de instalación y resolución de problemas"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+  fields: [date, title, reading-time, description, categories, author]
+page-layout: full
+title-block-banner: true
+lang: es
+---
+
+Bienvenido al cuaderno digital de la asignatura. Aquí se publicarán actualizaciones, recomendaciones de diseño, ayuda con el uso de simuladores y guías específicas para cada caso de laboratorio (CP).

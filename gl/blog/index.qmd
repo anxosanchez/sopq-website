@@ -1,0 +1,17 @@
+---
+title: "Caderno de Prácticas e Materiais (SOPQ)"
+subtitle: "Recursos de apoio, guías de instalación e resolución de problemas"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+  fields: [date, title, reading-time, description, categories, author]
+page-layout: full
+title-block-banner: true
+lang: gl
+---
+
+Benvido ao caderno dixital da materia. Aquí publicaranse actualizacións, recomendacións de deseño, axuda co uso de simuladores e guías específicas para cada caso de laboratorio (CP).

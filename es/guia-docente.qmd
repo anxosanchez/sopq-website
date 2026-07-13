@@ -1,0 +1,62 @@
+---
+title: "Guía Docente: Simulación y Optimización de Procesos Químicos"
+subtitle: "Curso Académico 2026-2027 | 1º Semestre"
+author: "Departamento de Ingeniería Química"
+date: "2026-09-07"
+lang: es
+---
+
+## 1. Datos Generales
+
+- **Asignatura**: Simulación y Optimización de Procesos Químicos (SOPQ)
+- **Titulación**: Grado en Ingeniería Química
+- **Créditos ECTS**: 6.0
+- **Semestre**: 1º (Septiembre 2026 - Enero 2027)
+- **Horarios**:
+  - **Teoría (Expositiva)**: Martes 12:00 - 14:00 (Aula 4)
+  - **Prácticas (Laboratorio de Informática)**: Jueves 09:00 - 11:00 (Aula de Informática B)
+
+---
+
+## 2. Descripción de la Asignatura
+
+La asignatura SOPQ capacita al alumnado para el uso de simuladores comerciales y de código abierto en la resolución de problemas complejos de diseño, optimización e integración de procesos industriales. Se abordan desde el ajuste de propiedades físicas y termodinámicas hasta la evaluación económica y de sostenibilidad de plantas completas de procesado.
+
+---
+
+## 3. Sistema de Evaluación
+
+La evaluación de la asignatura es continua, basada en el portafolio de casos individuales y el desarrollo de un proyecto integrado de diseño en grupo.
+
+::: {.callout-note}
+### Criterios de Calificación y Pesos
+
+La nota final de la asignatura se calculará según los siguientes porcentajes estructurados:
+
+1.  **Casos Prácticos Individuales (CP1 a CP12)**: **30%**
+    - Entrega semanal de las simulaciones y breves informes técnicos correspondientes a cada caso propuesto.
+2.  **Hitos del Proyecto de Grupo (M1 a M3)**: **20%**
+    - **M1 (Hito 1)**: Propuesta de Proceso y Diagrama de Bloques (5%)
+    - **M2 (Hito 2)**: Diagrama de Flujo y Balance Preliminar (5%)
+    - **M3 (Hito 3)**: Simulación Completa Convergente (10%)
+3.  **Memoria Final del Proyecto y Defensa Oral (PGI)**: **50%**
+    - Entrega del documento técnico final y los archivos de Aspen/DWSIM (30%)
+    - Presentación oral y ronda de preguntas individuales (20%)
+:::
+
+---
+
+## 4. Requisitos de Aprobación
+
+Para poder superar la asignatura en la modalidad de evaluación continua es necesario cumplir las siguientes condiciones:
+- Entregar como mínimo 10 de los 12 Casos Prácticos (CP) semanales dentro del plazo establecido.
+- Obtener una calificación mínima de 4.0 sobre 10 en cada uno de los tres bloques de evaluación (Casos, Hitos y Memoria/Defensa).
+- La nota media ponderada global debe ser igual o superior a 5.0 sobre 10.
+
+---
+
+## 5. Bibliografía y Recursos
+
+1.  **Seider, W. D., Lewin, D. R., Seader, J. D., Widagdo, S., Gani, R., & Ng, K. M.** (2017). *Product and Process Design Principles: Synthesis, Analysis and Evaluation*. John Wiley & Sons.
+2.  **Towler, G., & Sinnott, R.** (2012). *Chemical Engineering Design: Principles, Practice and Economics of Plant and Process Design*. Butterworth-Heinemann.
+3.  **DWSIM Documentation**: Disponible de forma gratuita online en [dwsim.org](https://dwsim.org).

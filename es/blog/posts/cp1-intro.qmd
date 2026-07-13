@@ -1,0 +1,51 @@
+---
+title: "Guía de Inicio: Simulación en DWSIM y Aspen Plus"
+description: "Introducción a la configuración del entorno de simulación, especificación de componentes y selección del modelo de propiedad física para el Caso Práctico 1."
+author: "Equipo Docente SOPQ"
+date: "2026-09-08"
+categories:
+  - Prácticas
+  - DWSIM
+  - Aspen Plus
+  - Termodinámica
+lang: es
+---
+
+En esta primera práctica del curso (CP1), el objetivo es familiarizarse con la interfaz de los dos simuladores que utilizaremos a lo largo del semestre: **Aspen Plus** (software comercial) y **DWSIM** (código abierto). 
+
+La simulación adecuada de cualquier proceso químico depende de tres decisiones iniciales críticas. Si alguna de estas decisiones es incorrecta, los balances de materia y energía finales carecerán de cualquier validez física.
+
+## Los Tres Pilares de una Simulación de Procesos
+
+1.  **Selección de Componentes Químicos (Chemical Components)**: Definir de forma inequívoca todas las especies químicas que participan en el proceso.
+2.  **Elección del Método Termodinámico (Property Method / Package)**: Seleccionar el conjunto de ecuaciones de estado o modelos de actividad que regirán las propiedades de mezcla y el equilibrio de fases.
+3.  **Especificación de las Corrientes de Alimentación (Feed Streams)**: Introducir variables intensivas (temperatura, presión, fracciones molares) y extensivas (caudal) suficientes para fijar el estado termodinámico de entrada.
+
+---
+
+## Selección del Paquete de Propiedades (Property Package)
+
+Para el primer caso práctico (CP1), simularemos una mezcla simple de agua y etanol. Al tratarse de un sistema polar con fuerte desviación de la idealidad y ocurrencia de azeotropía, los modelos ideales (como la ley de Raoult) fallarán por completo.
+
+Se recomienda utilizar el modelo **NRTL** (Non-Random Two-Liquid) o **UNIQUAC** para modelar el equilibrio líquido-vapor a presiones moderadas. 
+
+```text
+Ecuación de Actividad NRTL:
+ln(γ_i) = [Σ_j (τ_ji * G_ji * x_j) / Σ_k (G_ki * x_k)] + ...
+```
+
+### Pasos en DWSIM:
+1.  Crea un nuevo caso presionando en `New Simulation`.
+2.  Añade *Water* y *Ethanol* desde la base de datos de componentes.
+3.  En el paso de **Property Packages**, añade el modelo **NRTL**.
+4.  Define la presión de trabajo a $1\text{ atm}$ y calcula las propiedades de equilibrio.
+
+::: {.callout-important}
+### Recuerda
+No olvides comprobar los parámetros de interacción binaria del modelo NRTL. Si estos parámetros son cero, el simulador tratará la mezcla como ideal, omitiendo la formación del azeótropo.
+:::
+
+## Tareas a Realizar para el CP1:
+- Crear la corriente de alimentación con un 50% en moles de agua y 50% de etanol a $25^\circ\text{C}$ y $1\text{ atm}$.
+- Añadir un bloque flash y evaluar la composición de la fase vapor a $85^\circ\text{C}$.
+- Comparar los resultados obtenidos en Aspen Plus y DWSIM en tu memoria individual.

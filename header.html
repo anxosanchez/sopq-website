@@ -1,0 +1,44 @@
+<script>
+  (function() {
+    // 1. Detect active language from URL path
+    var path = window.location.pathname;
+    var lang = 'gl';
+    if (path.indexOf('/es/') !== -1) {
+      lang = 'es';
+    } else if (path.indexOf('/en/') !== -1) {
+      lang = 'en';
+    }
+    document.documentElement.classList.add('lang-' + lang);
+    document.documentElement.setAttribute('lang', lang);
+
+    // 2. Compute project root relative path prefix dynamically
+    var prefix = '';
+    var scripts = document.getElementsByTagName('script');
+    for (var i = 0; i < scripts.length; i++) {
+      var src = scripts[i].getAttribute('src');
+      if (src && src.indexOf('site_libs/') !== -1) {
+        prefix = src.substring(0, src.indexOf('site_libs/'));
+        break;
+      }
+    }
+    
+    // Fallback based on subdirectory depth
+    if (!prefix) {
+      var segments = path.split('/').filter(Boolean);
+      if (segments.length > 0 && segments[segments.length - 1].indexOf('.html') !== -1) {
+        segments.pop();
+      }
+      if (segments.length > 0 && (segments[0] === 'gl' || segments[0] === 'es' || segments[0] === 'en')) {
+        prefix = '../'.repeat(segments.length);
+      }
+    }
+
+    window.SOPQ_PATH_PREFIX = prefix;
+
+    // 3. Dynamically inject schedule.js
+    var scriptEl = document.createElement('script');
+    scriptEl.src = prefix + 'schedule.js';
+    scriptEl.defer = true;
+    document.head.appendChild(scriptEl);
+  })();
+</script>

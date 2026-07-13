@@ -1,0 +1,51 @@
+---
+title: "Getting Started: Simulating in DWSIM and Aspen Plus"
+description: "Introduction to simulator setup, chemical components specification, and physical property method selection for Lab Case 1."
+author: "SOPQ Teaching Staff"
+date: "2026-09-08"
+categories:
+  - Lab Cases
+  - DWSIM
+  - Aspen Plus
+  - Thermodynamics
+lang: en
+---
+
+In this first lab session (CP1), we focus on getting familiar with the interface of the two process simulation environments we will use throughout the semester: **Aspen Plus** (commercial software) and **DWSIM** (open source).
+
+A successful process simulation depends on making three initial, critical decisions. If any of these are incorrect, the resulting material and energy balances will carry no physical validity.
+
+## The Three Pillars of Process Simulation
+
+1.  **Chemical Components Selection**: Uniquely identify all chemical species involved in your process flow.
+2.  **Thermodynamic Property Method Selection**: Choose the appropriate equation of state or activity coefficient models to govern phase behavior and mixture properties.
+3.  **Feed Stream Specifications**: Input sufficient intensive (temperature, pressure, mole fractions) and extensive (flow rate) variables to mathematically lock the inlet thermodynamic state.
+
+---
+
+## Choosing a Property Package
+
+For our first case (CP1), we will model a simple Ethanol-Water mixture. Because this is a highly polar, non-ideal mixture exhibiting an azeotrope, ideal gas/liquid assumptions (such as Raoult's Law) will fail.
+
+We recommend using the **NRTL** (Non-Random Two-Liquid) or **UNIQUAC** activity coefficient models to solve the vapor-liquid equilibrium (VLE) at low-to-moderate pressures.
+
+```text
+NRTL Activity Coefficient Equation:
+ln(γ_i) = [Sir_j (τ_ji * G_ji * x_j) / Sir_k (G_ki * x_k)] + ...
+```
+
+### Steps in DWSIM:
+1.  Launch a new simulation by clicking `New Simulation`.
+2.  Add *Water* and *Ethanol* from the components list.
+3.  Add the **NRTL** model under **Property Packages**.
+4.  Set the system pressure to $1\text{ atm}$ and solve the mixture equilibrium.
+
+::: {.callout-important}
+### Important Warning
+Verify the binary interaction parameters inside the NRTL model. If they default to zero, the simulator will treat the mixture as ideal, failing to predict the azeotrope.
+:::
+
+## CP1 Tasks:
+- Set up a feed stream containing 50 mol% water and 50 mol% ethanol at $25^\circ\text{C}$ and $1\text{ atm}$.
+- Connect a flash block and determine the vapor composition at $85^\circ\text{C}$.
+- Compare DWSIM and Aspen Plus results in your final individual lab report.

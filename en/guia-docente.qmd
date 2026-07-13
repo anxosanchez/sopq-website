@@ -1,0 +1,62 @@
+---
+title: "Syllabus: Chemical Process Simulation and Optimization"
+subtitle: "Academic Year 2026-2027 | 1st Semester"
+author: "Department of Chemical Engineering"
+date: "2026-09-07"
+lang: en
+---
+
+## 1. General Information
+
+- **Course**: Chemical Process Simulation and Optimization (SOPQ)
+- **Program**: Bachelor's Degree in Chemical Engineering
+- **ECTS Credits**: 6.0
+- **Semester**: 1st (September 2026 - January 2027)
+- **Schedule**:
+  - **Lectures (Theory)**: Tuesdays 12:00 - 14:00 (Room 4)
+  - **Lab Sessions (Computer Lab)**: Thursdays 09:00 - 11:00 (Computer Lab B)
+
+---
+
+## 2. Course Description
+
+SOPQ trains students to use commercial and open-source simulators to solve complex design, optimization, and integration problems in process industries. The course covers thermodynamic property validation, equipment design (reactors, columns, heat exchangers), plant optimization, heat integration, and plant economic feasibility and sustainability analysis.
+
+---
+
+## 3. Grading Policy
+
+Evaluation is continuous, based on a portfolio of individual practical cases and the execution of a semester-long integrated group design project.
+
+::: {.callout-note}
+### Grading Breakdown and Weights
+
+The final grade is computed using the following weighted categories:
+
+1.  **Individual Lab Cases (CP1 to CP12)**: **30%**
+    - Weekly submissions of simulation files and brief technical notes corresponding to each lab exercise.
+2.  **Group Project Milestones (M1 to M3)**: **20%**
+    - **M1 (Milestone 1)**: Process Selection & Block Flow Diagram (5%)
+    - **M2 (Milestone 2)**: Process Flowsheet & Preliminary Mass Balance (5%)
+    - **M3 (Milestone 3)**: Complete Converged Simulation (10%)
+3.  **Final Project Design Report & Oral Defense (PGI)**: **50%**
+    - Final report document and Aspen/DWSIM source files submission (30%)
+    - Group presentation and individual Q&A defense (20%)
+:::
+
+---
+
+## 4. Academic Requirements
+
+To pass the course through continuous assessment, students must:
+- Submit at least 10 of the 12 weekly Lab Cases (CP) within the established deadline.
+- Achieve a minimum grade of 4.0 out of 10 in each of the three assessment blocks (Lab Cases, Milestones, and Report/Defense).
+- Obtain an overall weighted final grade of 5.0 out of 10 or higher.
+
+---
+
+## 5. References and Resources
+
+1.  **Seider, W. D., Lewin, D. R., Seader, J. D., Widagdo, S., Gani, R., & Ng, K. M.** (2017). *Product and Process Design Principles: Synthesis, Analysis and Evaluation*. John Wiley & Sons.
+2.  **Towler, G., & Sinnott, R.** (2012). *Chemical Engineering Design: Principles, Practice and Economics of Plant and Process Design*. Butterworth-Heinemann.
+3.  **DWSIM Documentation**: Available online at no cost on [dwsim.org](https://dwsim.org).
