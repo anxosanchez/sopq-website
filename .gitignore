@@ -12,3 +12,5 @@ Thumbs.db
 *.log
 out.txt
 err.txt
+
+**/*.quarto_ipynb

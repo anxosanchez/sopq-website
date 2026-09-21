@@ -2,6 +2,7 @@
 title: "Simulación e Optimización de Procesos Químicos"
 subtitle: "Grao en Enxeñaría Química | Curso 2026-2027"
 description: "Deseño asistido por ordenador, modelado termodinámico, integración enerxética e optimización económica de procesos químicos."
+sidebar: gl-sidebar
 ---
 
 ::: {.column-page}

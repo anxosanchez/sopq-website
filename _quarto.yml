@@ -56,12 +56,62 @@ website:
       - text: "English"
         href: en/index.qmd
 
+  sidebar:
+    - id: gl-sidebar
+      title: "SOPQ (UVIGO)"
+      style: docked
+      search: false
+      contents:
+        - text: "📅 Axenda e Calendario"
+          href: index.qmd
+        - text: "📋 Guía Docente"
+          href: gl/guia-docente.qmd
+        - text: "📓 Caderno de Prácticas"
+          href: gl/blog/index.qmd
+        - section: "🔬 Casos Prácticos"
+          contents:
+            - text: "CP1: DWSIM e Aspen Plus"
+              href: gl/blog/posts/cp1-intro.qmd
+    - id: es-sidebar
+      title: "SOPQ (UVIGO)"
+      style: docked
+      search: false
+      contents:
+        - text: "📅 Agenda y Calendario"
+          href: es/index.qmd
+        - text: "📋 Guía Docente"
+          href: es/guia-docente.qmd
+        - text: "📓 Cuaderno de Prácticas"
+          href: es/blog/index.qmd
+        - section: "🔬 Casos Prácticos"
+          contents:
+            - text: "CP1: DWSIM y Aspen Plus"
+              href: es/blog/posts/cp1-intro.qmd
+    - id: en-sidebar
+      title: "SOPQ (UVIGO)"
+      style: docked
+      search: false
+      contents:
+        - text: "📅 Course Schedule"
+          href: en/index.qmd
+        - text: "📋 Syllabus"
+          href: en/guia-docente.qmd
+        - text: "📓 Lab Journal"
+          href: en/blog/index.qmd
+        - section: "🔬 Lab Cases"
+          contents:
+            - text: "CP1: DWSIM & Aspen Plus"
+              href: en/blog/posts/cp1-intro.qmd
+
 format:
   html:
     theme:
       light: cosmo
       dark: superhero
     css: styles.css
+    page-layout: full
+    toc: true
+    toc-location: right
     include-in-header: header.html
     include-after-body: footer.html
 
