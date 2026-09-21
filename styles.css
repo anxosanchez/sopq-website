@@ -45,13 +45,177 @@ html.dark-mode, [data-bs-theme="dark"] {
   --badge-due-text: #FEB2B2;
 }
 
-/* Global Reset & Typography */
+/* Full-Width Page Container & Fluid Typography */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 body {
   font-family: var(--font-sans);
   background-color: var(--sopq-bg-light);
   color: var(--sopq-text-dark);
   line-height: 1.6;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ==========================================================================
+   Full Width Fluid Layout & Percentage-Based Pane Dimensions (Left, Center, Right)
+   ========================================================================== */
+
+:root {
+  /* Defined percentage widths for the 3 zones */
+  --sopq-pane-left: 20%;     /* Left Panel (Sidebar Navigation): 20% */
+  --sopq-pane-center: 60%;   /* Center Content (Main Document/Timeline): 60% */
+  --sopq-pane-right: 20%;    /* Right Panel (TOC / Categories): 20% */
+
+  /* 2-Pane Percentage Layouts */
+  --sopq-pane-2col-side: 22%;
+  --sopq-pane-2col-main: 78%;
+}
+
+/* Ensure outer wrappers expand to 100% of available viewport width */
+.quarto-container,
+#quarto-content {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  box-sizing: border-box;
+}
+
+/* Fluid navigation bar expanding across full width */
+.navbar > .container-fluid {
+  padding-left: clamp(1rem, 2.5vw, 2.5rem);
+  padding-right: clamp(1rem, 2.5vw, 2.5rem);
+  max-width: 100% !important;
+}
+
+/* Secondary Navigation / Breadcrumbs Bar */
+.quarto-secondary-nav {
+  width: 100% !important;
+  max-width: 100% !important;
+  background-color: var(--sopq-card-bg);
+  border-bottom: 1px solid var(--sopq-border-color);
+  padding: 0.5rem clamp(1rem, 2.5vw, 2.5rem) !important;
+}
+
+.quarto-secondary-nav .container-fluid {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+/* Remove fixed-width clamps on main content */
+#quarto-document-content,
+main.content,
+.content {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box;
+}
+
+/* Desktop 3-Zone Percentage Grid Engine */
+@media (min-width: 992px) {
+  #quarto-content.page-columns {
+    display: grid !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 0 !important;
+  }
+
+  /* 1. All 3 Zones Present: Left Panel (20%), Center Content (60%), Right Panel (20%) */
+  #quarto-content.page-columns:has(#quarto-sidebar):has(#quarto-margin-sidebar:not(:empty)) {
+    grid-template-columns: 
+      [screen-start page-start] var(--sopq-pane-left) 
+      [body-start body-content-start] var(--sopq-pane-center) 
+      [body-content-end body-end] var(--sopq-pane-right) 
+      [page-end screen-end] !important;
+  }
+
+  /* 2. 2 Zones Present: Left Panel (20%) + Center Content (80%) */
+  #quarto-content.page-columns:has(#quarto-sidebar):not(:has(#quarto-margin-sidebar:not(:empty))) {
+    grid-template-columns: 
+      [screen-start page-start] var(--sopq-pane-left) 
+      [body-start body-content-start] calc(100% - var(--sopq-pane-left)) 
+      [body-content-end body-end page-end screen-end] !important;
+  }
+
+  /* 3. 2 Zones Present without left sidebar: Center Content (78%) + Right Panel (22%) */
+  #quarto-content.page-columns:not(:has(#quarto-sidebar)):has(#quarto-margin-sidebar:not(:empty)) {
+    grid-template-columns: 
+      [screen-start page-start body-start body-content-start] var(--sopq-pane-2col-main) 
+      [body-content-end body-end] var(--sopq-pane-2col-side) 
+      [page-end screen-end] !important;
+  }
+
+  /* 4. 1 Zone Present: Center Content Only (100%) */
+  #quarto-content.page-columns:not(:has(#quarto-sidebar)):not(:has(#quarto-margin-sidebar:not(:empty))) {
+    grid-template-columns: 
+      [screen-start page-start body-start body-content-start] 100% 
+      [body-content-end body-end page-end screen-end] !important;
+  }
+
+  /* Grid column placement guarantees and pane styling */
+  #quarto-content > #quarto-sidebar {
+    grid-column: screen-start/body-start !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 1.5rem 1.25rem !important;
+    border-right: 1px solid var(--sopq-border-color);
+    background-color: var(--sopq-card-bg);
+    overflow-y: auto;
+    box-sizing: border-box;
+  }
+
+  #quarto-content > main#quarto-document-content,
+  #quarto-content > main.content {
+    grid-column: body-start/body-content-end !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 2rem clamp(1.5rem, 2.5vw, 3rem) !important;
+    box-sizing: border-box;
+  }
+
+  #quarto-content > #quarto-margin-sidebar {
+    grid-column: body-content-end/screen-end !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 1.5rem 1.25rem !important;
+    border-left: 1px solid var(--sopq-border-color);
+    overflow-y: auto;
+    box-sizing: border-box;
+  }
+}
+
+/* Mobile & Tablet Responsive Fallbacks */
+@media (max-width: 991.98px) {
+  #quarto-content.page-columns {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  #quarto-sidebar {
+    width: 100% !important;
+    border-right: none !important;
+  }
+
+  main#quarto-document-content {
+    width: 100% !important;
+    padding: 1.5rem 1rem !important;
+  }
+
+  #quarto-margin-sidebar {
+    width: 100% !important;
+    border-left: none !important;
+  }
 }
 
 /* Glassmorphism Navigation Bar */
@@ -143,11 +307,13 @@ html.lang-es .navbar-nav .nav-link[href*="es/index.html"] {
   display: block !important;
 }
 
-/* Schedule Layout & Timeline Component */
+/* Schedule Layout & Timeline Component (Full-Width Responsive) */
 .schedule-container {
-  max-width: 1100px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 1.5rem 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
 }
 
 /* Filters and Controls */
@@ -158,6 +324,8 @@ html.lang-es .navbar-nav .nav-link[href*="es/index.html"] {
   margin-bottom: 2rem;
   flex-wrap: wrap;
   gap: 1rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .filter-btn-group {
@@ -191,7 +359,7 @@ html.lang-es .navbar-nav .nav-link[href*="es/index.html"] {
   box-shadow: 0 4px 12px rgba(10, 92, 54, 0.2);
 }
 
-/* Timeline Cards */
+/* Timeline Cards (Fluid Full-Width) */
 .timeline-week-card {
   background-color: var(--sopq-card-bg);
   border: 1px solid var(--sopq-border-color);
@@ -199,10 +367,12 @@ html.lang-es .navbar-nav .nav-link[href*="es/index.html"] {
   padding: 1.5rem;
   margin-bottom: 1.5rem;
   display: grid;
-  grid-template-columns: 140px 1fr;
+  grid-template-columns: minmax(130px, 15%) 1fr;
   gap: 1.5rem;
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease;
   box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+  width: 100% !important;
+  box-sizing: border-box;
 }
 
 .timeline-week-card:hover {

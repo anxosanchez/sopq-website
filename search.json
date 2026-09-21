@@ -4,231 +4,375 @@
     "href": "en/blog/posts/cp1-intro.html",
     "title": "Getting Started: Simulating in DWSIM and Aspen Plus",
     "section": "",
-    "text": "In this first lab session (CP1), we focus on getting familiar with the interface of the two process simulation environments we will use throughout the semester: Aspen Plus (commercial software) and DWSIM (open source).\nA successful process simulation depends on making three initial, critical decisions. If any of these are incorrect, the resulting material and energy balances will carry no physical validity."
+    "text": "In this first lab session (CP1), we focus on getting familiar with the interface of the two process simulation environments we will use throughout the semester: Aspen Plus (commercial software) and DWSIM (open source).\nA successful process simulation depends on making three initial, critical decisions. If any of these are incorrect, the resulting material and energy balances will carry no physical validity.",
+    "crumbs": [
+      "SOPQ",
+      "🔬 Lab Cases",
+      "CP1: DWSIM & Aspen Plus"
+    ]
   },
   {
     "objectID": "en/blog/posts/cp1-intro.html#the-three-pillars-of-process-simulation",
     "href": "en/blog/posts/cp1-intro.html#the-three-pillars-of-process-simulation",
     "title": "Getting Started: Simulating in DWSIM and Aspen Plus",
     "section": "The Three Pillars of Process Simulation",
-    "text": "The Three Pillars of Process Simulation\n\nChemical Components Selection: Uniquely identify all chemical species involved in your process flow.\nThermodynamic Property Method Selection: Choose the appropriate equation of state or activity coefficient models to govern phase behavior and mixture properties.\nFeed Stream Specifications: Input sufficient intensive (temperature, pressure, mole fractions) and extensive (flow rate) variables to mathematically lock the inlet thermodynamic state."
+    "text": "The Three Pillars of Process Simulation\n\nChemical Components Selection: Uniquely identify all chemical species involved in your process flow.\nThermodynamic Property Method Selection: Choose the appropriate equation of state or activity coefficient models to govern phase behavior and mixture properties.\nFeed Stream Specifications: Input sufficient intensive (temperature, pressure, mole fractions) and extensive (flow rate) variables to mathematically lock the inlet thermodynamic state.",
+    "crumbs": [
+      "SOPQ",
+      "🔬 Lab Cases",
+      "CP1: DWSIM & Aspen Plus"
+    ]
   },
   {
     "objectID": "en/blog/posts/cp1-intro.html#choosing-a-property-package",
     "href": "en/blog/posts/cp1-intro.html#choosing-a-property-package",
     "title": "Getting Started: Simulating in DWSIM and Aspen Plus",
     "section": "Choosing a Property Package",
-    "text": "Choosing a Property Package\nFor our first case (CP1), we will model a simple Ethanol-Water mixture. Because this is a highly polar, non-ideal mixture exhibiting an azeotrope, ideal gas/liquid assumptions (such as Raoult’s Law) will fail.\nWe recommend using the NRTL (Non-Random Two-Liquid) or UNIQUAC activity coefficient models to solve the vapor-liquid equilibrium (VLE) at low-to-moderate pressures.\nNRTL Activity Coefficient Equation:\nln(γ_i) = [Sir_j (τ_ji * G_ji * x_j) / Sir_k (G_ki * x_k)] + ...\n\nSteps in DWSIM:\n\nLaunch a new simulation by clicking New Simulation.\nAdd Water and Ethanol from the components list.\nAdd the NRTL model under Property Packages.\nSet the system pressure to \\(1\\text{ atm}\\) and solve the mixture equilibrium.\n\n\n\n\n\n\n\nImportantImportant Warning\n\n\n\nVerify the binary interaction parameters inside the NRTL model. If they default to zero, the simulator will treat the mixture as ideal, failing to predict the azeotrope."
+    "text": "Choosing a Property Package\nFor our first case (CP1), we will model a simple Ethanol-Water mixture. Because this is a highly polar, non-ideal mixture exhibiting an azeotrope, ideal gas/liquid assumptions (such as Raoult’s Law) will fail.\nWe recommend using the NRTL (Non-Random Two-Liquid) or UNIQUAC activity coefficient models to solve the vapor-liquid equilibrium (VLE) at low-to-moderate pressures.\nNRTL Activity Coefficient Equation:\nln(γ_i) = [Sir_j (τ_ji * G_ji * x_j) / Sir_k (G_ki * x_k)] + ...\n\nSteps in DWSIM:\n\nLaunch a new simulation by clicking New Simulation.\nAdd Water and Ethanol from the components list.\nAdd the NRTL model under Property Packages.\nSet the system pressure to \\(1\\text{ atm}\\) and solve the mixture equilibrium.\n\n\n\n\n\n\n\nImportantImportant Warning\n\n\n\nVerify the binary interaction parameters inside the NRTL model. If they default to zero, the simulator will treat the mixture as ideal, failing to predict the azeotrope.",
+    "crumbs": [
+      "SOPQ",
+      "🔬 Lab Cases",
+      "CP1: DWSIM & Aspen Plus"
+    ]
   },
   {
     "objectID": "en/blog/posts/cp1-intro.html#cp1-tasks",
     "href": "en/blog/posts/cp1-intro.html#cp1-tasks",
     "title": "Getting Started: Simulating in DWSIM and Aspen Plus",
     "section": "CP1 Tasks:",
-    "text": "CP1 Tasks:\n\nSet up a feed stream containing 50 mol% water and 50 mol% ethanol at \\(25^\\circ\\text{C}\\) and \\(1\\text{ atm}\\).\nConnect a flash block and determine the vapor composition at \\(85^\\circ\\text{C}\\).\nCompare DWSIM and Aspen Plus results in your final individual lab report."
+    "text": "CP1 Tasks:\n\nSet up a feed stream containing 50 mol% water and 50 mol% ethanol at \\(25^\\circ\\text{C}\\) and \\(1\\text{ atm}\\).\nConnect a flash block and determine the vapor composition at \\(85^\\circ\\text{C}\\).\nCompare DWSIM and Aspen Plus results in your final individual lab report.",
+    "crumbs": [
+      "SOPQ",
+      "🔬 Lab Cases",
+      "CP1: DWSIM & Aspen Plus"
+    ]
   },
   {
     "objectID": "en/guia-docente.html",
     "href": "en/guia-docente.html",
     "title": "Syllabus: Chemical Process Simulation and Optimization",
     "section": "",
-    "text": "Course: Chemical Process Simulation and Optimization (SOPQ)\nProgram: Bachelor’s Degree in Chemical Engineering\nECTS Credits: 6.0\nSemester: 1st (September 2026 - January 2027)\nSchedule:\n\nLectures (Theory): Tuesdays 12:00 - 14:00 (Room 4)\nLab Sessions (Computer Lab): Thursdays 09:00 - 11:00 (Computer Lab B)"
+    "text": "Course: Chemical Process Simulation and Optimization (SOPQ)\nProgram: Bachelor’s Degree in Chemical Engineering\nECTS Credits: 6.0\nSemester: 1st (September 2026 - January 2027)\nSchedule:\n\nLectures (Theory): Tuesdays 12:00 - 14:00 (Room 4)\nLab Sessions (Computer Lab): Thursdays 09:00 - 11:00 (Computer Lab B)",
+    "crumbs": [
+      "SOPQ",
+      "📋 Syllabus"
+    ]
   },
   {
     "objectID": "en/guia-docente.html#general-information",
     "href": "en/guia-docente.html#general-information",
     "title": "Syllabus: Chemical Process Simulation and Optimization",
     "section": "",
-    "text": "Course: Chemical Process Simulation and Optimization (SOPQ)\nProgram: Bachelor’s Degree in Chemical Engineering\nECTS Credits: 6.0\nSemester: 1st (September 2026 - January 2027)\nSchedule:\n\nLectures (Theory): Tuesdays 12:00 - 14:00 (Room 4)\nLab Sessions (Computer Lab): Thursdays 09:00 - 11:00 (Computer Lab B)"
+    "text": "Course: Chemical Process Simulation and Optimization (SOPQ)\nProgram: Bachelor’s Degree in Chemical Engineering\nECTS Credits: 6.0\nSemester: 1st (September 2026 - January 2027)\nSchedule:\n\nLectures (Theory): Tuesdays 12:00 - 14:00 (Room 4)\nLab Sessions (Computer Lab): Thursdays 09:00 - 11:00 (Computer Lab B)",
+    "crumbs": [
+      "SOPQ",
+      "📋 Syllabus"
+    ]
   },
   {
     "objectID": "en/guia-docente.html#course-description",
     "href": "en/guia-docente.html#course-description",
     "title": "Syllabus: Chemical Process Simulation and Optimization",
     "section": "2. Course Description",
-    "text": "2. Course Description\nSOPQ trains students to use commercial and open-source simulators to solve complex design, optimization, and integration problems in process industries. The course covers thermodynamic property validation, equipment design (reactors, columns, heat exchangers), plant optimization, heat integration, and plant economic feasibility and sustainability analysis."
+    "text": "2. Course Description\nSOPQ trains students to use commercial and open-source simulators to solve complex design, optimization, and integration problems in process industries. The course covers thermodynamic property validation, equipment design (reactors, columns, heat exchangers), plant optimization, heat integration, and plant economic feasibility and sustainability analysis.",
+    "crumbs": [
+      "SOPQ",
+      "📋 Syllabus"
+    ]
   },
   {
     "objectID": "en/guia-docente.html#grading-policy",
     "href": "en/guia-docente.html#grading-policy",
     "title": "Syllabus: Chemical Process Simulation and Optimization",
     "section": "3. Grading Policy",
-    "text": "3. Grading Policy\nEvaluation is continuous, based on a portfolio of individual practical cases and the execution of a semester-long integrated group design project.\n\n\n\n\n\n\nNoteGrading Breakdown and Weights\n\n\n\nThe final grade is computed using the following weighted categories:\n\nIndividual Lab Cases (CP1 to CP12): 30%\n\nWeekly submissions of simulation files and brief technical notes corresponding to each lab exercise.\n\nGroup Project Milestones (M1 to M3): 20%\n\nM1 (Milestone 1): Process Selection & Block Flow Diagram (5%)\nM2 (Milestone 2): Process Flowsheet & Preliminary Mass Balance (5%)\nM3 (Milestone 3): Complete Converged Simulation (10%)\n\nFinal Project Design Report & Oral Defense (PGI): 50%\n\nFinal report document and Aspen/DWSIM source files submission (30%)\nGroup presentation and individual Q&A defense (20%)"
+    "text": "3. Grading Policy\nEvaluation is continuous, based on a portfolio of individual practical cases and the execution of a semester-long integrated group design project.\n\n\n\n\n\n\nNoteGrading Breakdown and Weights\n\n\n\nThe final grade is computed using the following weighted categories:\n\nIndividual Lab Cases (CP1 to CP12): 30%\n\nWeekly submissions of simulation files and brief technical notes corresponding to each lab exercise.\n\nGroup Project Milestones (M1 to M3): 20%\n\nM1 (Milestone 1): Process Selection & Block Flow Diagram (5%)\nM2 (Milestone 2): Process Flowsheet & Preliminary Mass Balance (5%)\nM3 (Milestone 3): Complete Converged Simulation (10%)\n\nFinal Project Design Report & Oral Defense (PGI): 50%\n\nFinal report document and Aspen/DWSIM source files submission (30%)\nGroup presentation and individual Q&A defense (20%)",
+    "crumbs": [
+      "SOPQ",
+      "📋 Syllabus"
+    ]
   },
   {
     "objectID": "en/guia-docente.html#academic-requirements",
     "href": "en/guia-docente.html#academic-requirements",
     "title": "Syllabus: Chemical Process Simulation and Optimization",
     "section": "4. Academic Requirements",
-    "text": "4. Academic Requirements\nTo pass the course through continuous assessment, students must: - Submit at least 10 of the 12 weekly Lab Cases (CP) within the established deadline. - Achieve a minimum grade of 4.0 out of 10 in each of the three assessment blocks (Lab Cases, Milestones, and Report/Defense). - Obtain an overall weighted final grade of 5.0 out of 10 or higher."
+    "text": "4. Academic Requirements\nTo pass the course through continuous assessment, students must: - Submit at least 10 of the 12 weekly Lab Cases (CP) within the established deadline. - Achieve a minimum grade of 4.0 out of 10 in each of the three assessment blocks (Lab Cases, Milestones, and Report/Defense). - Obtain an overall weighted final grade of 5.0 out of 10 or higher.",
+    "crumbs": [
+      "SOPQ",
+      "📋 Syllabus"
+    ]
   },
   {
     "objectID": "en/guia-docente.html#references-and-resources",
     "href": "en/guia-docente.html#references-and-resources",
     "title": "Syllabus: Chemical Process Simulation and Optimization",
     "section": "5. References and Resources",
-    "text": "5. References and Resources\n\nSeider, W. D., Lewin, D. R., Seader, J. D., Widagdo, S., Gani, R., & Ng, K. M. (2017). Product and Process Design Principles: Synthesis, Analysis and Evaluation. John Wiley & Sons.\nTowler, G., & Sinnott, R. (2012). Chemical Engineering Design: Principles, Practice and Economics of Plant and Process Design. Butterworth-Heinemann.\nDWSIM Documentation: Available online at no cost on dwsim.org."
+    "text": "5. References and Resources\n\nSeider, W. D., Lewin, D. R., Seader, J. D., Widagdo, S., Gani, R., & Ng, K. M. (2017). Product and Process Design Principles: Synthesis, Analysis and Evaluation. John Wiley & Sons.\nTowler, G., & Sinnott, R. (2012). Chemical Engineering Design: Principles, Practice and Economics of Plant and Process Design. Butterworth-Heinemann.\nDWSIM Documentation: Available online at no cost on dwsim.org.",
+    "crumbs": [
+      "SOPQ",
+      "📋 Syllabus"
+    ]
   },
   {
     "objectID": "es/blog/posts/cp1-intro.html",
     "href": "es/blog/posts/cp1-intro.html",
     "title": "Guía de Inicio: Simulación en DWSIM y Aspen Plus",
     "section": "",
-    "text": "En esta primera práctica del curso (CP1), el objetivo es familiarizarse con la interfaz de los dos simuladores que utilizaremos a lo largo del semestre: Aspen Plus (software comercial) y DWSIM (código abierto).\nLa simulación adecuada de cualquier proceso químico depende de tres decisiones iniciales críticas. Si alguna de estas decisiones es incorrecta, los balances de materia y energía finales carecerán de cualquier validez física."
+    "text": "En esta primera práctica del curso (CP1), el objetivo es familiarizarse con la interfaz de los dos simuladores que utilizaremos a lo largo del semestre: Aspen Plus (software comercial) y DWSIM (código abierto).\nLa simulación adecuada de cualquier proceso químico depende de tres decisiones iniciales críticas. Si alguna de estas decisiones es incorrecta, los balances de materia y energía finales carecerán de cualquier validez física.",
+    "crumbs": [
+      "SOPQ",
+      "🔬 Casos Prácticos",
+      "CP1: DWSIM y Aspen Plus"
+    ]
   },
   {
     "objectID": "es/blog/posts/cp1-intro.html#los-tres-pilares-de-una-simulación-de-procesos",
     "href": "es/blog/posts/cp1-intro.html#los-tres-pilares-de-una-simulación-de-procesos",
     "title": "Guía de Inicio: Simulación en DWSIM y Aspen Plus",
     "section": "Los Tres Pilares de una Simulación de Procesos",
-    "text": "Los Tres Pilares de una Simulación de Procesos\n\nSelección de Componentes Químicos (Chemical Components): Definir de forma inequívoca todas las especies químicas que participan en el proceso.\nElección del Método Termodinámico (Property Method / Package): Seleccionar el conjunto de ecuaciones de estado o modelos de actividad que regirán las propiedades de mezcla y el equilibrio de fases.\nEspecificación de las Corrientes de Alimentación (Feed Streams): Introducir variables intensivas (temperatura, presión, fracciones molares) y extensivas (caudal) suficientes para fijar el estado termodinámico de entrada."
+    "text": "Los Tres Pilares de una Simulación de Procesos\n\nSelección de Componentes Químicos (Chemical Components): Definir de forma inequívoca todas las especies químicas que participan en el proceso.\nElección del Método Termodinámico (Property Method / Package): Seleccionar el conjunto de ecuaciones de estado o modelos de actividad que regirán las propiedades de mezcla y el equilibrio de fases.\nEspecificación de las Corrientes de Alimentación (Feed Streams): Introducir variables intensivas (temperatura, presión, fracciones molares) y extensivas (caudal) suficientes para fijar el estado termodinámico de entrada.",
+    "crumbs": [
+      "SOPQ",
+      "🔬 Casos Prácticos",
+      "CP1: DWSIM y Aspen Plus"
+    ]
   },
   {
     "objectID": "es/blog/posts/cp1-intro.html#selección-del-paquete-de-propiedades-property-package",
     "href": "es/blog/posts/cp1-intro.html#selección-del-paquete-de-propiedades-property-package",
     "title": "Guía de Inicio: Simulación en DWSIM y Aspen Plus",
     "section": "Selección del Paquete de Propiedades (Property Package)",
-    "text": "Selección del Paquete de Propiedades (Property Package)\nPara el primer caso práctico (CP1), simularemos una mezcla simple de agua y etanol. Al tratarse de un sistema polar con fuerte desviación de la idealidad y ocurrencia de azeotropía, los modelos ideales (como la ley de Raoult) fallarán por completo.\nSe recomienda utilizar el modelo NRTL (Non-Random Two-Liquid) o UNIQUAC para modelar el equilibrio líquido-vapor a presiones moderadas.\nEcuación de Actividad NRTL:\nln(γ_i) = [Σ_j (τ_ji * G_ji * x_j) / Σ_k (G_ki * x_k)] + ...\n\nPasos en DWSIM:\n\nCrea un nuevo caso presionando en New Simulation.\nAñade Water y Ethanol desde la base de datos de componentes.\nEn el paso de Property Packages, añade el modelo NRTL.\nDefine la presión de trabajo a \\(1\\text{ atm}\\) y calcula las propiedades de equilibrio.\n\n\n\n\n\n\n\nImportanteRecuerda\n\n\n\nNo olvides comprobar los parámetros de interacción binaria del modelo NRTL. Si estos parámetros son cero, el simulador tratará la mezcla como ideal, omitiendo la formación del azeótropo."
+    "text": "Selección del Paquete de Propiedades (Property Package)\nPara el primer caso práctico (CP1), simularemos una mezcla simple de agua y etanol. Al tratarse de un sistema polar con fuerte desviación de la idealidad y ocurrencia de azeotropía, los modelos ideales (como la ley de Raoult) fallarán por completo.\nSe recomienda utilizar el modelo NRTL (Non-Random Two-Liquid) o UNIQUAC para modelar el equilibrio líquido-vapor a presiones moderadas.\nEcuación de Actividad NRTL:\nln(γ_i) = [Σ_j (τ_ji * G_ji * x_j) / Σ_k (G_ki * x_k)] + ...\n\nPasos en DWSIM:\n\nCrea un nuevo caso presionando en New Simulation.\nAñade Water y Ethanol desde la base de datos de componentes.\nEn el paso de Property Packages, añade el modelo NRTL.\nDefine la presión de trabajo a \\(1\\text{ atm}\\) y calcula las propiedades de equilibrio.\n\n\n\n\n\n\n\nImportanteRecuerda\n\n\n\nNo olvides comprobar los parámetros de interacción binaria del modelo NRTL. Si estos parámetros son cero, el simulador tratará la mezcla como ideal, omitiendo la formación del azeótropo.",
+    "crumbs": [
+      "SOPQ",
+      "🔬 Casos Prácticos",
+      "CP1: DWSIM y Aspen Plus"
+    ]
   },
   {
     "objectID": "es/blog/posts/cp1-intro.html#tareas-a-realizar-para-el-cp1",
     "href": "es/blog/posts/cp1-intro.html#tareas-a-realizar-para-el-cp1",
     "title": "Guía de Inicio: Simulación en DWSIM y Aspen Plus",
     "section": "Tareas a Realizar para el CP1:",
-    "text": "Tareas a Realizar para el CP1:\n\nCrear la corriente de alimentación con un 50% en moles de agua y 50% de etanol a \\(25^\\circ\\text{C}\\) y \\(1\\text{ atm}\\).\nAñadir un bloque flash y evaluar la composición de la fase vapor a \\(85^\\circ\\text{C}\\).\nComparar los resultados obtenidos en Aspen Plus y DWSIM en tu memoria individual."
+    "text": "Tareas a Realizar para el CP1:\n\nCrear la corriente de alimentación con un 50% en moles de agua y 50% de etanol a \\(25^\\circ\\text{C}\\) y \\(1\\text{ atm}\\).\nAñadir un bloque flash y evaluar la composición de la fase vapor a \\(85^\\circ\\text{C}\\).\nComparar los resultados obtenidos en Aspen Plus y DWSIM en tu memoria individual.",
+    "crumbs": [
+      "SOPQ",
+      "🔬 Casos Prácticos",
+      "CP1: DWSIM y Aspen Plus"
+    ]
   },
   {
     "objectID": "es/guia-docente.html",
     "href": "es/guia-docente.html",
     "title": "Guía Docente: Simulación y Optimización de Procesos Químicos",
     "section": "",
-    "text": "Asignatura: Simulación y Optimización de Procesos Químicos (SOPQ)\nTitulación: Grado en Ingeniería Química\nCréditos ECTS: 6.0\nSemestre: 1º (Septiembre 2026 - Enero 2027)\nHorarios:\n\nTeoría (Expositiva): Martes 12:00 - 14:00 (Aula 4)\nPrácticas (Laboratorio de Informática): Jueves 09:00 - 11:00 (Aula de Informática B)"
+    "text": "Asignatura: Simulación y Optimización de Procesos Químicos (SOPQ)\nTitulación: Grado en Ingeniería Química\nCréditos ECTS: 6.0\nSemestre: 1º (Septiembre 2026 - Enero 2027)\nHorarios:\n\nTeoría (Expositiva): Martes 12:00 - 14:00 (Aula 4)\nPrácticas (Laboratorio de Informática): Jueves 09:00 - 11:00 (Aula de Informática B)",
+    "crumbs": [
+      "SOPQ",
+      "📋 Guía Docente"
+    ]
   },
   {
     "objectID": "es/guia-docente.html#datos-generales",
     "href": "es/guia-docente.html#datos-generales",
     "title": "Guía Docente: Simulación y Optimización de Procesos Químicos",
     "section": "",
-    "text": "Asignatura: Simulación y Optimización de Procesos Químicos (SOPQ)\nTitulación: Grado en Ingeniería Química\nCréditos ECTS: 6.0\nSemestre: 1º (Septiembre 2026 - Enero 2027)\nHorarios:\n\nTeoría (Expositiva): Martes 12:00 - 14:00 (Aula 4)\nPrácticas (Laboratorio de Informática): Jueves 09:00 - 11:00 (Aula de Informática B)"
+    "text": "Asignatura: Simulación y Optimización de Procesos Químicos (SOPQ)\nTitulación: Grado en Ingeniería Química\nCréditos ECTS: 6.0\nSemestre: 1º (Septiembre 2026 - Enero 2027)\nHorarios:\n\nTeoría (Expositiva): Martes 12:00 - 14:00 (Aula 4)\nPrácticas (Laboratorio de Informática): Jueves 09:00 - 11:00 (Aula de Informática B)",
+    "crumbs": [
+      "SOPQ",
+      "📋 Guía Docente"
+    ]
   },
   {
     "objectID": "es/guia-docente.html#descripción-de-la-asignatura",
     "href": "es/guia-docente.html#descripción-de-la-asignatura",
     "title": "Guía Docente: Simulación y Optimización de Procesos Químicos",
     "section": "2. Descripción de la Asignatura",
-    "text": "2. Descripción de la Asignatura\nLa asignatura SOPQ capacita al alumnado para el uso de simuladores comerciales y de código abierto en la resolución de problemas complejos de diseño, optimización e integración de procesos industriales. Se abordan desde el ajuste de propiedades físicas y termodinámicas hasta la evaluación económica y de sostenibilidad de plantas completas de procesado."
+    "text": "2. Descripción de la Asignatura\nLa asignatura SOPQ capacita al alumnado para el uso de simuladores comerciales y de código abierto en la resolución de problemas complejos de diseño, optimización e integración de procesos industriales. Se abordan desde el ajuste de propiedades físicas y termodinámicas hasta la evaluación económica y de sostenibilidad de plantas completas de procesado.",
+    "crumbs": [
+      "SOPQ",
+      "📋 Guía Docente"
+    ]
   },
   {
     "objectID": "es/guia-docente.html#sistema-de-evaluación",
     "href": "es/guia-docente.html#sistema-de-evaluación",
     "title": "Guía Docente: Simulación y Optimización de Procesos Químicos",
     "section": "3. Sistema de Evaluación",
-    "text": "3. Sistema de Evaluación\nLa evaluación de la asignatura es continua, basada en el portafolio de casos individuales y el desarrollo de un proyecto integrado de diseño en grupo.\n\n\n\n\n\n\nNotaCriterios de Calificación y Pesos\n\n\n\nLa nota final de la asignatura se calculará según los siguientes porcentajes estructurados:\n\nCasos Prácticos Individuales (CP1 a CP12): 30%\n\nEntrega semanal de las simulaciones y breves informes técnicos correspondientes a cada caso propuesto.\n\nHitos del Proyecto de Grupo (M1 a M3): 20%\n\nM1 (Hito 1): Propuesta de Proceso y Diagrama de Bloques (5%)\nM2 (Hito 2): Diagrama de Flujo y Balance Preliminar (5%)\nM3 (Hito 3): Simulación Completa Convergente (10%)\n\nMemoria Final del Proyecto y Defensa Oral (PGI): 50%\n\nEntrega del documento técnico final y los archivos de Aspen/DWSIM (30%)\nPresentación oral y ronda de preguntas individuales (20%)"
+    "text": "3. Sistema de Evaluación\nLa evaluación de la asignatura es continua, basada en el portafolio de casos individuales y el desarrollo de un proyecto integrado de diseño en grupo.\n\n\n\n\n\n\nNotaCriterios de Calificación y Pesos\n\n\n\nLa nota final de la asignatura se calculará según los siguientes porcentajes estructurados:\n\nCasos Prácticos Individuales (CP1 a CP12): 30%\n\nEntrega semanal de las simulaciones y breves informes técnicos correspondientes a cada caso propuesto.\n\nHitos del Proyecto de Grupo (M1 a M3): 20%\n\nM1 (Hito 1): Propuesta de Proceso y Diagrama de Bloques (5%)\nM2 (Hito 2): Diagrama de Flujo y Balance Preliminar (5%)\nM3 (Hito 3): Simulación Completa Convergente (10%)\n\nMemoria Final del Proyecto y Defensa Oral (PGI): 50%\n\nEntrega del documento técnico final y los archivos de Aspen/DWSIM (30%)\nPresentación oral y ronda de preguntas individuales (20%)",
+    "crumbs": [
+      "SOPQ",
+      "📋 Guía Docente"
+    ]
   },
   {
     "objectID": "es/guia-docente.html#requisitos-de-aprobación",
     "href": "es/guia-docente.html#requisitos-de-aprobación",
     "title": "Guía Docente: Simulación y Optimización de Procesos Químicos",
     "section": "4. Requisitos de Aprobación",
-    "text": "4. Requisitos de Aprobación\nPara poder superar la asignatura en la modalidad de evaluación continua es necesario cumplir las siguientes condiciones: - Entregar como mínimo 10 de los 12 Casos Prácticos (CP) semanales dentro del plazo establecido. - Obtener una calificación mínima de 4.0 sobre 10 en cada uno de los tres bloques de evaluación (Casos, Hitos y Memoria/Defensa). - La nota media ponderada global debe ser igual o superior a 5.0 sobre 10."
+    "text": "4. Requisitos de Aprobación\nPara poder superar la asignatura en la modalidad de evaluación continua es necesario cumplir las siguientes condiciones: - Entregar como mínimo 10 de los 12 Casos Prácticos (CP) semanales dentro del plazo establecido. - Obtener una calificación mínima de 4.0 sobre 10 en cada uno de los tres bloques de evaluación (Casos, Hitos y Memoria/Defensa). - La nota media ponderada global debe ser igual o superior a 5.0 sobre 10.",
+    "crumbs": [
+      "SOPQ",
+      "📋 Guía Docente"
+    ]
   },
   {
     "objectID": "es/guia-docente.html#bibliografía-y-recursos",
     "href": "es/guia-docente.html#bibliografía-y-recursos",
     "title": "Guía Docente: Simulación y Optimización de Procesos Químicos",
     "section": "5. Bibliografía y Recursos",
-    "text": "5. Bibliografía y Recursos\n\nSeider, W. D., Lewin, D. R., Seader, J. D., Widagdo, S., Gani, R., & Ng, K. M. (2017). Product and Process Design Principles: Synthesis, Analysis and Evaluation. John Wiley & Sons.\nTowler, G., & Sinnott, R. (2012). Chemical Engineering Design: Principles, Practice and Economics of Plant and Process Design. Butterworth-Heinemann.\nDWSIM Documentation: Disponible de forma gratuita online en dwsim.org."
+    "text": "5. Bibliografía y Recursos\n\nSeider, W. D., Lewin, D. R., Seader, J. D., Widagdo, S., Gani, R., & Ng, K. M. (2017). Product and Process Design Principles: Synthesis, Analysis and Evaluation. John Wiley & Sons.\nTowler, G., & Sinnott, R. (2012). Chemical Engineering Design: Principles, Practice and Economics of Plant and Process Design. Butterworth-Heinemann.\nDWSIM Documentation: Disponible de forma gratuita online en dwsim.org.",
+    "crumbs": [
+      "SOPQ",
+      "📋 Guía Docente"
+    ]
   },
   {
     "objectID": "gl/blog/posts/cp1-intro.html",
     "href": "gl/blog/posts/cp1-intro.html",
     "title": "Guía de Inicio: Simulación en DWSIM e Aspen Plus",
     "section": "",
-    "text": "Nesta primeira práctica do curso (CP1), o obxectivo é familiarizarse coa interface dos dous simuladores que empregaremos ao longo do cuadrimestre: Aspen Plus (software comercial) e DWSIM (código aberto).\nA simulación axeitada de calquera proceso químico depende de tres decisións iniciais críticas. Se algunha destas decisións é incorrecta, os balances de materia e enerxía finais carecerán de calquera validez física."
+    "text": "Nesta primeira práctica do curso (CP1), o obxectivo é familiarizarse coa interface dos dous simuladores que empregaremos ao longo do cuadrimestre: Aspen Plus (software comercial) e DWSIM (código aberto).\nA simulación axeitada de calquera proceso químico depende de tres decisións iniciais críticas. Se algunha destas decisións é incorrecta, os balances de materia e enerxía finais carecerán de calquera validez física.",
+    "crumbs": [
+      "SOPQ",
+      "🔬 Casos Prácticos",
+      "CP1: DWSIM e Aspen Plus"
+    ]
   },
   {
     "objectID": "gl/blog/posts/cp1-intro.html#os-tres-piares-dunha-simulación-de-procesos",
     "href": "gl/blog/posts/cp1-intro.html#os-tres-piares-dunha-simulación-de-procesos",
     "title": "Guía de Inicio: Simulación en DWSIM e Aspen Plus",
     "section": "Os Tres Piares dunha Simulación de Procesos",
-    "text": "Os Tres Piares dunha Simulación de Procesos\n\nSelección de Compoñentes Químicos (Chemical Components): Definir de forma inequívoca todas as especies químicas que participan no proceso.\nElección do Método Termodinámico (Property Method / Package): Seleccionar o conxunto de ecuacións de estado ou modelos de actividade que rexerán as propiedades de mestura e o equilibrio de fases.\nEspecificación das Correntes de Alimentación (Feed Streams): Introducir variables intensivas (temperatura, presión, fraccións molares) e extensivas (caudal) suficientes para fixar o estado termodinámico de entrada."
+    "text": "Os Tres Piares dunha Simulación de Procesos\n\nSelección de Compoñentes Químicos (Chemical Components): Definir de forma inequívoca todas as especies químicas que participan no proceso.\nElección do Método Termodinámico (Property Method / Package): Seleccionar o conxunto de ecuacións de estado ou modelos de actividade que rexerán as propiedades de mestura e o equilibrio de fases.\nEspecificación das Correntes de Alimentación (Feed Streams): Introducir variables intensivas (temperatura, presión, fraccións molares) e extensivas (caudal) suficientes para fixar o estado termodinámico de entrada.",
+    "crumbs": [
+      "SOPQ",
+      "🔬 Casos Prácticos",
+      "CP1: DWSIM e Aspen Plus"
+    ]
   },
   {
     "objectID": "gl/blog/posts/cp1-intro.html#selección-do-paquete-de-propiedades-property-package",
     "href": "gl/blog/posts/cp1-intro.html#selección-do-paquete-de-propiedades-property-package",
     "title": "Guía de Inicio: Simulación en DWSIM e Aspen Plus",
     "section": "Selección do Paquete de Propiedades (Property Package)",
-    "text": "Selección do Paquete de Propiedades (Property Package)\nPara o primeiro caso práctico (CP1), simularemos unha mestura simple de auga e etanol. Ao tratarse dun sistema polar con forte desviación da idealidade e aza de azeotropía, os modelos ideais (como a lei de Raoult) fallarán por completo.\nRecoméndase utilizar o modelo NRTL (Non-Random Two-Liquid) ou UNIQUAC para modelar o equilibrio líquido-vapor a presións moderadas.\nEcuación de Actividade NRTL:\nln(γ_i) = [Σ_j (τ_ji * G_ji * x_j) / Σ_k (G_ki * x_k)] + ...\n\nPasos en DWSIM:\n\nCrea un novo caso premendo en New Simulation.\nEngade Water e Ethanol desde a base de datos de compoñentes.\nNo paso de Property Packages, engade o modelo NRTL.\nDefine a presión de traballo a \\(1\\text{ atm}\\) e calcula as propiedades de equilibrio.\n\n\n\n\n\n\n\nImportantLembra\n\n\n\nNon esquezas comprobar os parámetros de interacción binaria do modelo NRTL. Se estes parámetros son cero, o simulador tratará a mestura como ideal, omitindo a formación do azeótropo."
+    "text": "Selección do Paquete de Propiedades (Property Package)\nPara o primeiro caso práctico (CP1), simularemos unha mestura simple de auga e etanol. Ao tratarse dun sistema polar con forte desviación da idealidade e aza de azeotropía, os modelos ideais (como a lei de Raoult) fallarán por completo.\nRecoméndase utilizar o modelo NRTL (Non-Random Two-Liquid) ou UNIQUAC para modelar o equilibrio líquido-vapor a presións moderadas.\nEcuación de Actividade NRTL:\nln(γ_i) = [Σ_j (τ_ji * G_ji * x_j) / Σ_k (G_ki * x_k)] + ...\n\nPasos en DWSIM:\n\nCrea un novo caso premendo en New Simulation.\nEngade Water e Ethanol desde a base de datos de compoñentes.\nNo paso de Property Packages, engade o modelo NRTL.\nDefine a presión de traballo a \\(1\\text{ atm}\\) e calcula as propiedades de equilibrio.\n\n\n\n\n\n\n\nImportantLembra\n\n\n\nNon esquezas comprobar os parámetros de interacción binaria do modelo NRTL. Se estes parámetros son cero, o simulador tratará a mestura como ideal, omitindo a formación do azeótropo.",
+    "crumbs": [
+      "SOPQ",
+      "🔬 Casos Prácticos",
+      "CP1: DWSIM e Aspen Plus"
+    ]
   },
   {
     "objectID": "gl/blog/posts/cp1-intro.html#tareas-a-realizar-para-o-cp1",
     "href": "gl/blog/posts/cp1-intro.html#tareas-a-realizar-para-o-cp1",
     "title": "Guía de Inicio: Simulación en DWSIM e Aspen Plus",
     "section": "Tareas a Realizar para o CP1:",
-    "text": "Tareas a Realizar para o CP1:\n\nCrear a correntede alimentación cun 50% en moles de auga e 50% de etanol a \\(25^\\circ\\text{C}\\) e \\(1\\text{ atm}\\).\nEngadir un bloque flash e avaliar a composición da fase vapor a \\(85^\\circ\\text{C}\\).\nComparar os resultados obtidos en Aspen Plus e DWSIM na túa memoria individual."
+    "text": "Tareas a Realizar para o CP1:\n\nCrear a correntede alimentación cun 50% en moles de auga e 50% de etanol a \\(25^\\circ\\text{C}\\) e \\(1\\text{ atm}\\).\nEngadir un bloque flash e avaliar a composición da fase vapor a \\(85^\\circ\\text{C}\\).\nComparar os resultados obtidos en Aspen Plus e DWSIM na túa memoria individual.",
+    "crumbs": [
+      "SOPQ",
+      "🔬 Casos Prácticos",
+      "CP1: DWSIM e Aspen Plus"
+    ]
   },
   {
     "objectID": "gl/guia-docente.html",
     "href": "gl/guia-docente.html",
     "title": "Guía Docente: Simulación e Optimización de Procesos Químicos",
     "section": "",
-    "text": "Materia: Simulación e Optimización de Procesos Químicos (SOPQ)\nTitulación: Grao en Enxeñaría Química\nCréditos ECTS: 6.0\nCuadrimestre: 1º (Setembro 2026 - Xaneiro 2027)\nHorarios:\n\nTeoría (Expositiva): Martes 12:00 - 14:00 (Aula 4)\nPrácticas (Laboratorio de Informática): Xoves 09:00 - 11:00 (Aula de Informática B)"
+    "text": "Materia: Simulación e Optimización de Procesos Químicos (SOPQ)\nTitulación: Grao en Enxeñaría Química\nCréditos ECTS: 6.0\nCuadrimestre: 1º (Setembro 2026 - Xaneiro 2027)\nHorarios:\n\nTeoría (Expositiva): Martes 12:00 - 14:00 (Aula 4)\nPrácticas (Laboratorio de Informática): Xoves 09:00 - 11:00 (Aula de Informática B)",
+    "crumbs": [
+      "SOPQ",
+      "📋 Guía Docente"
+    ]
   },
   {
     "objectID": "gl/guia-docente.html#datos-xerais",
     "href": "gl/guia-docente.html#datos-xerais",
     "title": "Guía Docente: Simulación e Optimización de Procesos Químicos",
     "section": "",
-    "text": "Materia: Simulación e Optimización de Procesos Químicos (SOPQ)\nTitulación: Grao en Enxeñaría Química\nCréditos ECTS: 6.0\nCuadrimestre: 1º (Setembro 2026 - Xaneiro 2027)\nHorarios:\n\nTeoría (Expositiva): Martes 12:00 - 14:00 (Aula 4)\nPrácticas (Laboratorio de Informática): Xoves 09:00 - 11:00 (Aula de Informática B)"
+    "text": "Materia: Simulación e Optimización de Procesos Químicos (SOPQ)\nTitulación: Grao en Enxeñaría Química\nCréditos ECTS: 6.0\nCuadrimestre: 1º (Setembro 2026 - Xaneiro 2027)\nHorarios:\n\nTeoría (Expositiva): Martes 12:00 - 14:00 (Aula 4)\nPrácticas (Laboratorio de Informática): Xoves 09:00 - 11:00 (Aula de Informática B)",
+    "crumbs": [
+      "SOPQ",
+      "📋 Guía Docente"
+    ]
   },
   {
     "objectID": "gl/guia-docente.html#descrición-da-materia",
     "href": "gl/guia-docente.html#descrición-da-materia",
     "title": "Guía Docente: Simulación e Optimización de Procesos Químicos",
     "section": "2. Descrición da Materia",
-    "text": "2. Descrición da Materia\nA materia SOPQ capacita ao alumnado para o uso de simuladores comerciais e de código aberto na resolución de problemas complexos de deseño, optimización e integración de procesos industriais. Abórdanse desde o axuste de propiedades físicas e termodinámicas ata a avaliación económica e a sustentabilidade de plantas completas de procesado."
+    "text": "2. Descrición da Materia\nA materia SOPQ capacita ao alumnado para o uso de simuladores comerciais e de código aberto na resolución de problemas complexos de deseño, optimización e integración de procesos industriais. Abórdanse desde o axuste de propiedades físicas e termodinámicas ata a avaliación económica e a sustentabilidade de plantas completas de procesado.",
+    "crumbs": [
+      "SOPQ",
+      "📋 Guía Docente"
+    ]
   },
   {
     "objectID": "gl/guia-docente.html#sistema-de-avaliación",
     "href": "gl/guia-docente.html#sistema-de-avaliación",
     "title": "Guía Docente: Simulación e Optimización de Procesos Químicos",
     "section": "3. Sistema de Avaliación",
-    "text": "3. Sistema de Avaliación\nA avaliación da materia é continua, baseada no portafolio de casos individuais e o desenvolvemento dun proxecto integrado de deseño en grupo.\n\n\n\n\n\n\nNoteCriterios de Calificación e Pesos\n\n\n\nA nota final da materia calcularase segundo as seguintes porcentaxes estruturadas:\n\nCasos Prácticos Individuais (CP1 a CP12): 30%\n\nEntrega semanal das simulacións e breves informes técnicos correspondentes a cada caso proposto.\n\nFitos do Proxecto de Grupo (M1 a M3): 20%\n\nM1 (Fito 1): Proposta de Proceso e Diagrama de Bloques (5%)\nM2 (Fito 2): Diagrama de Fluxo e Balance Preliminar (5%)\nM3 (Fito 3): Simulación Completa Converxente (10%)\n\nMemoria Final do Proxecto e Defensa Oral (PGI): 50%\n\nEntrega do documento técnico final e os arquivos de Aspen/DWSIM (30%)\nPresentación oral e rolda de preguntas individuais (20%)"
+    "text": "3. Sistema de Avaliación\nA avaliación da materia é continua, baseada no portafolio de casos individuais e o desenvolvemento dun proxecto integrado de deseño en grupo.\n\n\n\n\n\n\nNoteCriterios de Calificación e Pesos\n\n\n\nA nota final da materia calcularase segundo as seguintes porcentaxes estruturadas:\n\nCasos Prácticos Individuais (CP1 a CP12): 30%\n\nEntrega semanal das simulacións e breves informes técnicos correspondentes a cada caso proposto.\n\nFitos do Proxecto de Grupo (M1 a M3): 20%\n\nM1 (Fito 1): Proposta de Proceso e Diagrama de Bloques (5%)\nM2 (Fito 2): Diagrama de Fluxo e Balance Preliminar (5%)\nM3 (Fito 3): Simulación Completa Converxente (10%)\n\nMemoria Final do Proxecto e Defensa Oral (PGI): 50%\n\nEntrega do documento técnico final e os arquivos de Aspen/DWSIM (30%)\nPresentación oral e rolda de preguntas individuais (20%)",
+    "crumbs": [
+      "SOPQ",
+      "📋 Guía Docente"
+    ]
   },
   {
     "objectID": "gl/guia-docente.html#requisitos-de-aprobación",
     "href": "gl/guia-docente.html#requisitos-de-aprobación",
     "title": "Guía Docente: Simulación e Optimización de Procesos Químicos",
     "section": "4. Requisitos de Aprobación",
-    "text": "4. Requisitos de Aprobación\nPara poder superar a materia na modalidade de avaliación continua é necesario cumprir as seguintes condicións: - Entregar como mínimo 10 dos 12 Casos Prácticos (CP) semanais dentro do prazo correspondente. - Obter unha calificación mínima de 4.0 sobre 10 en cada un dos tres bloques de avaliación (Casos, Fitos e Memoria/Defensa). - A nota media ponderada global debe ser igual ou superior a 5.0 sobre 10."
+    "text": "4. Requisitos de Aprobación\nPara poder superar a materia na modalidade de avaliación continua é necesario cumprir as seguintes condicións: - Entregar como mínimo 10 dos 12 Casos Prácticos (CP) semanais dentro do prazo correspondente. - Obter unha calificación mínima de 4.0 sobre 10 en cada un dos tres bloques de avaliación (Casos, Fitos e Memoria/Defensa). - A nota media ponderada global debe ser igual ou superior a 5.0 sobre 10.",
+    "crumbs": [
+      "SOPQ",
+      "📋 Guía Docente"
+    ]
   },
   {
     "objectID": "gl/guia-docente.html#bibliografía-e-recursos",
     "href": "gl/guia-docente.html#bibliografía-e-recursos",
     "title": "Guía Docente: Simulación e Optimización de Procesos Químicos",
     "section": "5. Bibliografía e Recursos",
-    "text": "5. Bibliografía e Recursos\n\nSeider, W. D., Lewin, D. R., Seader, J. D., Widagdo, S., Gani, R., & Ng, K. M. (2017). Product and Process Design Principles: Synthesis, Analysis and Evaluation. John Wiley & Sons.\nTowler, G., & Sinnott, R. (2012). Chemical Engineering Design: Principles, Practice and Economics of Plant and Process Design. Butterworth-Heinemann.\nDWSIM Documentation: Dispoñible de balde online en dwsim.org."
+    "text": "5. Bibliografía e Recursos\n\nSeider, W. D., Lewin, D. R., Seader, J. D., Widagdo, S., Gani, R., & Ng, K. M. (2017). Product and Process Design Principles: Synthesis, Analysis and Evaluation. John Wiley & Sons.\nTowler, G., & Sinnott, R. (2012). Chemical Engineering Design: Principles, Practice and Economics of Plant and Process Design. Butterworth-Heinemann.\nDWSIM Documentation: Dispoñible de balde online en dwsim.org.",
+    "crumbs": [
+      "SOPQ",
+      "📋 Guía Docente"
+    ]
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Simulación e Optimización de Procesos Químicos",
     "section": "",
-    "text": "Este é o portal web oficial para a materia Simulación e Optimización de Procesos Químicos (SOPQ) do primeiro cuadrimestre do curso académico 2026-2027. Aquí atoparás todo o material necesario para as clases teóricas, as guías dos casos prácticos de laboratorio e o seguimento do Proxecto Integrador de Grupo (PGI).\n\n\n\nUtiliza a seguinte liña de tempo interactiva para consultar o contido de cada semana, acceder ás presentacións de teoría, descargar os guías de prácticas (CP) e ver os prazos de entrega.\n\n\n\n\n\n\n\n\nPlataforma de Simulación: Empregaremos DWSIM (código aberto) e Aspen Plus v14 nas sesións de laboratorio informático.\nCanle de Dúbidas: Podes formular preguntas sobre os casos prácticos no foro de Moodle ou a través do correo institucional.\nEntrega de Traballos: Todas as entregas dos casos (CP1 a CP12) e os fitos do proxecto (M1 a M3) realizaranse na aula virtual."
+    "text": "Este é o portal web oficial para a materia Simulación e Optimización de Procesos Químicos (SOPQ) do primeiro cuadrimestre do curso académico 2026-2027. Aquí atoparás todo o material necesario para as clases teóricas, as guías dos casos prácticos de laboratorio e o seguimento do Proxecto Integrador de Grupo (PGI).\n\n\n\nUtiliza a seguinte liña de tempo interactiva para consultar o contido de cada semana, acceder ás presentacións de teoría, descargar os guías de prácticas (CP) e ver os prazos de entrega.\n\n\n\n\n\n\n\n\nPlataforma de Simulación: Empregaremos DWSIM (código aberto) e Aspen Plus v14 nas sesións de laboratorio informático.\nCanle de Dúbidas: Podes formular preguntas sobre os casos prácticos no foro de Moodle ou a través do correo institucional.\nEntrega de Traballos: Todas as entregas dos casos (CP1 a CP12) e os fitos do proxecto (M1 a M3) realizaranse na aula virtual.",
+    "crumbs": [
+      "SOPQ",
+      "📅 Axenda e Calendario"
+    ]
   },
   {
     "objectID": "index.html#axenda-e-calendario-do-curso",
     "href": "index.html#axenda-e-calendario-do-curso",
     "title": "Simulación e Optimización de Procesos Químicos",
     "section": "",
-    "text": "Utiliza a seguinte liña de tempo interactiva para consultar o contido de cada semana, acceder ás presentacións de teoría, descargar os guías de prácticas (CP) e ver os prazos de entrega."
+    "text": "Utiliza a seguinte liña de tempo interactiva para consultar o contido de cada semana, acceder ás presentacións de teoría, descargar os guías de prácticas (CP) e ver os prazos de entrega.",
+    "crumbs": [
+      "SOPQ",
+      "📅 Axenda e Calendario"
+    ]
   },
   {
     "objectID": "index.html#canles-de-comunicación-e-ferramentas",
     "href": "index.html#canles-de-comunicación-e-ferramentas",
     "title": "Simulación e Optimización de Procesos Químicos",
     "section": "",
-    "text": "Plataforma de Simulación: Empregaremos DWSIM (código aberto) e Aspen Plus v14 nas sesións de laboratorio informático.\nCanle de Dúbidas: Podes formular preguntas sobre os casos prácticos no foro de Moodle ou a través do correo institucional.\nEntrega de Traballos: Todas as entregas dos casos (CP1 a CP12) e os fitos do proxecto (M1 a M3) realizaranse na aula virtual."
+    "text": "Plataforma de Simulación: Empregaremos DWSIM (código aberto) e Aspen Plus v14 nas sesións de laboratorio informático.\nCanle de Dúbidas: Podes formular preguntas sobre os casos prácticos no foro de Moodle ou a través do correo institucional.\nEntrega de Traballos: Todas as entregas dos casos (CP1 a CP12) e os fitos do proxecto (M1 a M3) realizaranse na aula virtual.",
+    "crumbs": [
+      "SOPQ",
+      "📅 Axenda e Calendario"
+    ]
   },
   {
     "objectID": "gl/index.html",
@@ -256,62 +400,98 @@
     "href": "gl/blog/index.html",
     "title": "Caderno de Prácticas e Materiais (SOPQ)",
     "section": "",
-    "text": "Benvido ao caderno dixital da materia. Aquí publicaranse actualizacións, recomendacións de deseño, axuda co uso de simuladores e guías específicas para cada caso de laboratorio (CP).\n\n\n\n\n\n\n\n\n\nGuía de Inicio: Simulación en DWSIM e Aspen Plus\n\n\n\nPrácticas\n\nDWSIM\n\nAspen Plus\n\nTermodinámica\n\n\n\nIntrodución á configuración do contorno de simulación, especificación de compoñentes e selección do modelo de propiedade física para o Caso Práctico 1.\n\n\n\n\n\nSep 8, 2026\n\n\nEquipo Docente SOPQ\n\n2 min\n\n\n\n\nNo matching items"
+    "text": "Benvido ao caderno dixital da materia. Aquí publicaranse actualizacións, recomendacións de deseño, axuda co uso de simuladores e guías específicas para cada caso de laboratorio (CP).\n\n\n\n\n\n\n\n\n\nGuía de Inicio: Simulación en DWSIM e Aspen Plus\n\n\n\nPrácticas\n\nDWSIM\n\nAspen Plus\n\nTermodinámica\n\n\n\nIntrodución á configuración do contorno de simulación, especificación de compoñentes e selección do modelo de propiedade física para o Caso Práctico 1.\n\n\n\n\n\nSep 8, 2026\n\n\nEquipo Docente SOPQ\n\n2 min\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "SOPQ",
+      "📓 Caderno de Prácticas"
+    ]
   },
   {
     "objectID": "es/index.html",
     "href": "es/index.html",
     "title": "Simulación y Optimización de Procesos Químicos",
     "section": "",
-    "text": "Este es el portal web oficial para la asignatura Simulación y Optimización de Procesos Químicos (SOPQ) del primer semestre del curso académico 2026-2027. Aquí encontrarás todo el material necesario para las clases teóricas, las guías de los casos prácticos de laboratorio y el seguimiento del Proyecto Integrado de Grupo (PGI).\n\n\n\nUtiliza la siguiente línea de tiempo interactiva para consultar el contenido de cada semana, acceder a las presentaciones de teoría, descargar las guías de prácticas (CP) y ver los plazos de entrega.\n\n\n\n\n\n\n\n\nPlataforma de Simulación: Utilizaremos DWSIM (código abierto) y Aspen Plus v14 en las sesiones de laboratorio informático.\nCanal de Dudas: Puedes formular preguntas sobre los casos prácticos en el foro de Moodle o a través del correo institucional.\nEntrega de Trabajos: Todas las entregas de los casos (CP1 a CP12) y los hitos del proyecto (M1 a M3) se realizarán a través del aula virtual."
+    "text": "Este es el portal web oficial para la asignatura Simulación y Optimización de Procesos Químicos (SOPQ) del primer semestre del curso académico 2026-2027. Aquí encontrarás todo el material necesario para las clases teóricas, las guías de los casos prácticos de laboratorio y el seguimiento del Proyecto Integrado de Grupo (PGI).\n\n\n\nUtiliza la siguiente línea de tiempo interactiva para consultar el contenido de cada semana, acceder a las presentaciones de teoría, descargar las guías de prácticas (CP) y ver los plazos de entrega.\n\n\n\n\n\n\n\n\nPlataforma de Simulación: Utilizaremos DWSIM (código abierto) y Aspen Plus v14 en las sesiones de laboratorio informático.\nCanal de Dudas: Puedes formular preguntas sobre los casos prácticos en el foro de Moodle o a través del correo institucional.\nEntrega de Trabajos: Todas las entregas de los casos (CP1 a CP12) y los hitos del proyecto (M1 a M3) se realizarán a través del aula virtual.",
+    "crumbs": [
+      "SOPQ",
+      "📅 Agenda y Calendario"
+    ]
   },
   {
     "objectID": "es/index.html#agenda-y-calendario-del-curso",
     "href": "es/index.html#agenda-y-calendario-del-curso",
     "title": "Simulación y Optimización de Procesos Químicos",
     "section": "",
-    "text": "Utiliza la siguiente línea de tiempo interactiva para consultar el contenido de cada semana, acceder a las presentaciones de teoría, descargar las guías de prácticas (CP) y ver los plazos de entrega."
+    "text": "Utiliza la siguiente línea de tiempo interactiva para consultar el contenido de cada semana, acceder a las presentaciones de teoría, descargar las guías de prácticas (CP) y ver los plazos de entrega.",
+    "crumbs": [
+      "SOPQ",
+      "📅 Agenda y Calendario"
+    ]
   },
   {
     "objectID": "es/index.html#canales-de-comunicación-y-herramientas",
     "href": "es/index.html#canales-de-comunicación-y-herramientas",
     "title": "Simulación y Optimización de Procesos Químicos",
     "section": "",
-    "text": "Plataforma de Simulación: Utilizaremos DWSIM (código abierto) y Aspen Plus v14 en las sesiones de laboratorio informático.\nCanal de Dudas: Puedes formular preguntas sobre los casos prácticos en el foro de Moodle o a través del correo institucional.\nEntrega de Trabajos: Todas las entregas de los casos (CP1 a CP12) y los hitos del proyecto (M1 a M3) se realizarán a través del aula virtual."
+    "text": "Plataforma de Simulación: Utilizaremos DWSIM (código abierto) y Aspen Plus v14 en las sesiones de laboratorio informático.\nCanal de Dudas: Puedes formular preguntas sobre los casos prácticos en el foro de Moodle o a través del correo institucional.\nEntrega de Trabajos: Todas las entregas de los casos (CP1 a CP12) y los hitos del proyecto (M1 a M3) se realizarán a través del aula virtual.",
+    "crumbs": [
+      "SOPQ",
+      "📅 Agenda y Calendario"
+    ]
   },
   {
     "objectID": "es/blog/index.html",
     "href": "es/blog/index.html",
     "title": "Cuaderno de Prácticas y Materiales (SOPQ)",
     "section": "",
-    "text": "Bienvenido al cuaderno digital de la asignatura. Aquí se publicarán actualizaciones, recomendaciones de diseño, ayuda con el uso de simuladores y guías específicas para cada caso de laboratorio (CP).\n\n\n\n\n\n\n\n\n\nGuía de Inicio: Simulación en DWSIM y Aspen Plus\n\n\n\nPrácticas\n\nDWSIM\n\nAspen Plus\n\nTermodinámica\n\n\n\nIntroducción a la configuración del entorno de simulación, especificación de componentes y selección del modelo de propiedad física para el Caso Práctico 1.\n\n\n\n\n\n8 sept 2026\n\n\nEquipo Docente SOPQ\n\n2 minutos\n\n\n\n\nNo hay resultados"
+    "text": "Bienvenido al cuaderno digital de la asignatura. Aquí se publicarán actualizaciones, recomendaciones de diseño, ayuda con el uso de simuladores y guías específicas para cada caso de laboratorio (CP).\n\n\n\n\n\n\n\n\n\nGuía de Inicio: Simulación en DWSIM y Aspen Plus\n\n\n\nPrácticas\n\nDWSIM\n\nAspen Plus\n\nTermodinámica\n\n\n\nIntroducción a la configuración del entorno de simulación, especificación de componentes y selección del modelo de propiedad física para el Caso Práctico 1.\n\n\n\n\n\n8 sept 2026\n\n\nEquipo Docente SOPQ\n\n2 minutos\n\n\n\n\nNo hay resultados",
+    "crumbs": [
+      "SOPQ",
+      "📓 Cuaderno de Prácticas"
+    ]
   },
   {
     "objectID": "en/index.html",
     "href": "en/index.html",
     "title": "Chemical Process Simulation and Optimization",
     "section": "",
-    "text": "This is the official course portal for Chemical Process Simulation and Optimization (SOPQ) corresponding to the first semester of the 2026-2027 academic year. Here you will find all the materials required for lectures, practical lab session guides (CP), and tracking for the Integrated Group Project (PGI).\n\n\n\nUse the interactive timeline below to browse week-by-week topics, view lecture slide links, download lab case (CP) instructions, and track deliverable due dates.\n\n\n\n\n\n\n\n\nSimulation Software: We will use DWSIM (open source) and Aspen Plus v14 during our computer laboratory sessions.\nQ&A Forum: You can submit questions regarding the practical cases on the Moodle forum or via institutional email.\nAssignments: All lab case (CP1-CP12) submissions and group project milestones (M1-M3) are turned in through the Virtual Classroom."
+    "text": "This is the official course portal for Chemical Process Simulation and Optimization (SOPQ) corresponding to the first semester of the 2026-2027 academic year. Here you will find all the materials required for lectures, practical lab session guides (CP), and tracking for the Integrated Group Project (PGI).\n\n\n\nUse the interactive timeline below to browse week-by-week topics, view lecture slide links, download lab case (CP) instructions, and track deliverable due dates.\n\n\n\n\n\n\n\n\nSimulation Software: We will use DWSIM (open source) and Aspen Plus v14 during our computer laboratory sessions.\nQ&A Forum: You can submit questions regarding the practical cases on the Moodle forum or via institutional email.\nAssignments: All lab case (CP1-CP12) submissions and group project milestones (M1-M3) are turned in through the Virtual Classroom.",
+    "crumbs": [
+      "SOPQ",
+      "📅 Course Schedule"
+    ]
   },
   {
     "objectID": "en/index.html#course-timeline-agenda",
     "href": "en/index.html#course-timeline-agenda",
     "title": "Chemical Process Simulation and Optimization",
     "section": "",
-    "text": "Use the interactive timeline below to browse week-by-week topics, view lecture slide links, download lab case (CP) instructions, and track deliverable due dates."
+    "text": "Use the interactive timeline below to browse week-by-week topics, view lecture slide links, download lab case (CP) instructions, and track deliverable due dates.",
+    "crumbs": [
+      "SOPQ",
+      "📅 Course Schedule"
+    ]
   },
   {
     "objectID": "en/index.html#communication-channels-tools",
     "href": "en/index.html#communication-channels-tools",
     "title": "Chemical Process Simulation and Optimization",
     "section": "",
-    "text": "Simulation Software: We will use DWSIM (open source) and Aspen Plus v14 during our computer laboratory sessions.\nQ&A Forum: You can submit questions regarding the practical cases on the Moodle forum or via institutional email.\nAssignments: All lab case (CP1-CP12) submissions and group project milestones (M1-M3) are turned in through the Virtual Classroom."
+    "text": "Simulation Software: We will use DWSIM (open source) and Aspen Plus v14 during our computer laboratory sessions.\nQ&A Forum: You can submit questions regarding the practical cases on the Moodle forum or via institutional email.\nAssignments: All lab case (CP1-CP12) submissions and group project milestones (M1-M3) are turned in through the Virtual Classroom.",
+    "crumbs": [
+      "SOPQ",
+      "📅 Course Schedule"
+    ]
   },
   {
     "objectID": "en/blog/index.html",
     "href": "en/blog/index.html",
     "title": "Lab Journal & Course Materials (SOPQ)",
     "section": "",
-    "text": "Welcome to our digital course journal. Here we will publish course updates, process design guidelines, tips for process simulators, and specific walk-throughs for each computer laboratory case (CP).\n\n\n\n\n\n\n\n\n\nGetting Started: Simulating in DWSIM and Aspen Plus\n\n\n\nLab Cases\n\nDWSIM\n\nAspen Plus\n\nThermodynamics\n\n\n\nIntroduction to simulator setup, chemical components specification, and physical property method selection for Lab Case 1.\n\n\n\n\n\nSep 8, 2026\n\n\nSOPQ Teaching Staff\n\n2 min\n\n\n\n\nNo matching items"
+    "text": "Welcome to our digital course journal. Here we will publish course updates, process design guidelines, tips for process simulators, and specific walk-throughs for each computer laboratory case (CP).\n\n\n\n\n\n\n\n\n\nGetting Started: Simulating in DWSIM and Aspen Plus\n\n\n\nLab Cases\n\nDWSIM\n\nAspen Plus\n\nThermodynamics\n\n\n\nIntroduction to simulator setup, chemical components specification, and physical property method selection for Lab Case 1.\n\n\n\n\n\nSep 8, 2026\n\n\nSOPQ Teaching Staff\n\n2 min\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "SOPQ",
+      "📓 Lab Journal"
+    ]
   }
 ]
